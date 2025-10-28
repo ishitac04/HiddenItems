@@ -10,8 +10,3 @@ TO DO LIST:
 - Add sound effects
 - Add score tracking
 - Add incorrect touches lives things
-
-Things to learn:
-- touch-tracking in js
-- css scrolly bar - done
-- stuff disappearing
