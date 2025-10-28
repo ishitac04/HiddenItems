@@ -99,6 +99,7 @@ body {
     border: #ffffff solid 2px;
     border-radius: 20px;
     transition: height 0.3s linear;
+    z-index: 999;
 }
 
 #score {
@@ -113,14 +114,14 @@ body {
 }
 
 #cover {
-    height: 40px;
-    width: 60px;
-    background-image: url("cover.png");
+    height: 120px;
+    width: 151px;
+    background-image: url("cover2.png");
     background-size: 100%;
-    left: 200px;
-    top: 450px;
+    left: 10px;
+    top: 460px;
     position: fixed;
-    z-index: 99;
+    z-index: 10;
 }
 
 #lamp {
@@ -157,12 +158,100 @@ body {
 }
 
 #cup {
-    height: 35px;
-    width: 40px;
+    height: 25px;
+    width: 30px;
     background-image: url("cup.png");
     background-size: 100%;
     left: 680px;
+    top: 370px;
+    position: fixed;
+    z-index: 99;
+}
+
+#pinkvase {
+    height: 80px;
+    width: 35px;
+    background-image: url("pinkvase.png");
+    background-size: 100%;
+    left: 200px;
+    top: 250px;
+    position: fixed;
+    z-index: 99;
+}
+
+#bluescarf {
+    height: 90px;
+    width: 35px;
+    background-image: url("bluescarf.png");
+    background-size: 100%;
+    left: 300px;
+    top: 250px;
+    position: fixed;
+    z-index: 99;
+}
+
+#bird {
+    height: 65px;
+    width: 60px;
+    background-image: url("bird.png");
+    background-size: 100%;
+    left: 640px;
+    top: 300px;
+    position: fixed;
+    z-index: 99;
+}
+
+#clock {
+    height: 50px;
+    width: 50px;
+    background-image: url("clock.png");
+    background-size: 100%;
+    left: 420px;
+    top: 245px;
+    position: fixed;
+    z-index: 99;
+}
+
+#clock {
+    height: 50px;
+    width: 50px;
+    background-image: url("clock.png");
+    background-size: 100%;
+    left: 420px;
+    top: 245px;
+    position: fixed;
+    z-index: 99;
+}
+
+#typewriter {
+    height: 35px;
+    width: 50px;
+    background-image: url("typewriter.png");
+    background-size: 100%;
+    left: 495px;
     top: 360px;
     position: fixed;
     z-index: 99;
+}
+
+#mirror {
+    height: 75px;
+    width: 60px;
+    background-image: url("mirror.png");
+    background-size: 100%;
+    left: 755px;
+    top: 247px;
+    position: fixed;
+    z-index: 99;
+}
+
+#clock2 {
+    height: 40px;
+    width: 30px;
+    background-image: url("clock2.png");
+    background-size: 100%;
+    left: 160px;
+    top: 540px;
+    position: fixed;
+    z-index: 10;
 }
