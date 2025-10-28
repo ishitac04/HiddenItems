@@ -1,17 +1,17 @@
 body {
-    background-color: bisque;
+    background-color: rgb(41, 42, 92);
     position: relative;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #title {
-    height: 100px;
+    height: 80px;
     width: 1350px;
-    border: 2px solid #000000;
-    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142));
+    border: 2px solid #ffffff;
+    background: linear-gradient(rgb(189, 200, 202), rgb(142, 158, 201));
     text-align: center;
-    font-size: 90px;
+    font-size: 70px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -22,18 +22,18 @@ body {
 
 #scrollingbox {
     left: 100px;
-    height: 460px;
+    height: 480px;
     width: 400px;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     z-index: 999;
     overflow-y: scroll;
 }
 
 #maingamebox {
-    height: 460px;
+    height: 480px;
     width: 1000px;
-    border: 2px solid #000000;
-    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142))
+    border: 2px solid #ffffff;
+    background: radial-gradient(rgb(189, 200, 202), rgb(142, 158, 201))
 }
 
 .littlebox {
@@ -42,9 +42,32 @@ body {
     width: 360px;
     margin-left: 10px;
     margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
     font-size: xx-large;
-    border: #000000 solid 1px;
-    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142))
+    border: #ffffff solid 1px;
+    background: radial-gradient(rgb(189, 200, 202), rgb(142, 158, 201));
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#image1 {
+    background-size: 100%;
+    top: 104px;
+    height: 480px;
+    width: 950px;
+    z-index: 10;
+    position: fixed;
+}
+
+#hint {
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    top: 490px;
+    left: 875px;
+    background-image: url("hint.png");
+    background-size: 100%;
 }
 
 #bodycontent {
@@ -69,18 +92,11 @@ body {
     left: 20px;
 }
   
-.image1 {
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    position: relative;
-}
-
 #timerbar {
     width: 100%;
     height: 100%;
     background-color: red;
-    border: #000000 solid 2px;
+    border: #ffffff solid 2px;
     border-radius: 20px;
     transition: height 0.3s linear;
 }
@@ -90,7 +106,29 @@ body {
     margin-left: 5px;
     height: 20px;
     width: 150px;
-    border: #000000 2px solid;
+    background-color: rgb(200, 201, 142);
+    border: #ffffff 2px solid;
     z-index: 999;
-    position: relative;
+    position: fixed;
+}
+
+#lamp {
+    height: 40px;
+    width: 60px;
+    background-image: url("lamp.png");
+    background-size: 100%;
+    left: 200px;
+    top: 450px;
+    position: fixed;
+    z-index: 99;
+}
+
+#keys {
+    height: 40px;
+    width: 50px;
+    background-size: 100%;
+    left: 340px;
+    top: 525px;
+    position: fixed;
+    z-index: 99;
 }

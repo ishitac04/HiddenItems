@@ -10,3 +10,4 @@ TO DO LIST:
 - Add sound effects
 - Add score tracking
 - Add incorrect touches lives things
+- Hint button
