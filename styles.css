@@ -1,0 +1,47 @@
+body {
+    background-color: bisque;
+    position: relative;
+}
+
+#title {
+    height: 100px;
+    width: 1350px;
+    border: 2px solid #000000;
+}
+
+#timer {
+    height: 30px;
+    width: 1350px;
+}
+
+#scrollingbox {
+    left: 100px;
+    height: 460px;
+    width: 400px;
+    border: 2px solid #000000;
+    z-index: 999;
+}
+
+#maingamebox {
+    height: 460px;
+    width: 1000px;
+    border: 2px solid #000000;
+}
+
+.littlebox {
+    margin-top: 10px;;
+    height: 50px;
+    width: 380px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: #000000 solid 1px;
+}
+
+#bodycontent {
+    margin-top: 10px;;
+    height: 450px;
+    width: 1350px;
+    display: flex;
+    gap: 10px;
+    bottom: 20px;
+}
