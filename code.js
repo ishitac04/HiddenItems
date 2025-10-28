@@ -17,6 +17,10 @@ function reduceTime() {
     }
 }
 
+function loseLife() {
+    alert("NOT AN ITEM!!")
+}
+
 document.addEventListener('click', (i) => {
     if (i.target.id === 'lamp') {
         timeleft=timeleft+2;
@@ -27,11 +31,13 @@ document.addEventListener('click', (i) => {
     } else if (i.target.id === 'keys') {
         timeleft=timeleft+2;
         boxes[1]?.remove();
+        document.getElementById("keys").style.display="none";
         numscore=numscore+1;
         score.textContent = "Items Found: "+numscore; 
     } else if (i.target.id === 'image1') {
-        alert("NOT AN ITEM!")
+        loseLife();
     }
 });
 
-//setInterval(reduceTime,1000);
+
+setInterval(reduceTime,1000);
