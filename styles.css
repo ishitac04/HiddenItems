@@ -1,12 +1,18 @@
 body {
     background-color: bisque;
     position: relative;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #title {
     height: 100px;
     width: 1350px;
     border: 2px solid #000000;
+    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142));
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #timer {
@@ -20,21 +26,25 @@ body {
     width: 400px;
     border: 2px solid #000000;
     z-index: 999;
+    overflow-y: scroll;
 }
 
 #maingamebox {
     height: 460px;
     width: 1000px;
     border: 2px solid #000000;
+    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142))
 }
 
 .littlebox {
-    margin-top: 10px;;
+    margin-top: 10px;
     height: 50px;
-    width: 380px;
+    width: 360px;
     margin-left: 10px;
     margin-right: 10px;
+    font-size: xx-large;
     border: #000000 solid 1px;
+    background: radial-gradient(rgb(200, 201, 142),rgb(231, 231, 142))
 }
 
 #bodycontent {
@@ -44,4 +54,34 @@ body {
     display: flex;
     gap: 10px;
     bottom: 20px;
+}
+
+#timerwrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 20px;
+    height: 400px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+  
+#timerbar {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border: #000000 solid 2px;
+    border-radius: 20px;
+    transition: height 0.3s linear;
+}
+
+#score {
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 20px;
+    width: 150px;
+    border: #000000 2px solid;
 }

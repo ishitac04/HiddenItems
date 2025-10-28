@@ -13,5 +13,5 @@ TO DO LIST:
 
 Things to learn:
 - touch-tracking in js
-- css scrolly bar
+- css scrolly bar - done
 - stuff disappearing
