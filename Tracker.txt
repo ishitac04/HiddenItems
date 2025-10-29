@@ -1,9 +1,15 @@
 HiddenItems game
 
 TO DO LIST:
-- Create an opening screen
-- Add end screen
 - Add background music
 - Add level 2
 - Add level 3
+- opening/ end image
 - Add menu screen?
+
+Images needed:
+- start screen
+- endscreen
+- new level 2
+- new level 3
+- too many hints used ("no hints left")

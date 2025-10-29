@@ -12,6 +12,7 @@ let lives = 3;
 let timerInterval;
 let id;
 let newarray;
+let hintsused=0;
 
 
 function reduceTime() {
@@ -47,13 +48,17 @@ function correctItem() {
     numscore=numscore+1;
     score.textContent = "Items Found: "+numscore;
     if (numscore==10) {
-        let screen = document.getElementById("overlayscreen")
+        let screen = document.getElementById("overlayscreen");
         screen.style.display="block";
+        document.getElementById("menubutton").style.display = "block";
+        document.getElementById("button2").style.display = "block";
+        clearInterval(timerInterval)
     }
 }
 
 overlayscreen2.addEventListener('click', () => {
-      overlayscreen2.style.display = 'none';
+    overlayscreen2.style.display = 'none';
+    timerInterval = setInterval(reduceTime,1000);
 });
 
 document.addEventListener('click', (i) => {
@@ -98,13 +103,16 @@ document.addEventListener('click', (i) => {
         document.getElementById("mirror").style.display="none";
         correctItem();
     } else if (i.target.id === 'hint') {
+        if (hintsused < 3) {
         newarray = document.querySelectorAll(".littlebox");
         console.log(newarray);
         id = newarray[0].textContent.trim().toLowerCase();
+        hintsused=hintsused+1;
         document.getElementById(id)?.classList.add('glow');
+        } else {
+            alert("too many hints used!")
+        }
     } else if (i.target.id === 'image1') {
         loseLife();
     }
 });
-
-timerInterval = setInterval(reduceTime,1000);
