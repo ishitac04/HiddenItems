@@ -7,8 +7,11 @@ const boxes = document.querySelectorAll(".littlebox");
 const correct = document.getElementById("correct");
 const wrong = document.getElementById("wrong");
 const lamp = document.getElementById('lamp');
+const overlayscreen2 = document.getElementById('overlayscreen2');
 let lives = 3;
 let timerInterval;
+let id;
+let newarray;
 
 
 function reduceTime() {
@@ -44,10 +47,14 @@ function correctItem() {
     numscore=numscore+1;
     score.textContent = "Items Found: "+numscore;
     if (numscore==10) {
-        alert("DONE!!")
+        let screen = document.getElementById("overlayscreen")
+        screen.style.display="block";
     }
 }
 
+overlayscreen2.addEventListener('click', () => {
+      overlayscreen2.style.display = 'none';
+});
 
 document.addEventListener('click', (i) => {
     if (i.target.id === 'lamp') {
@@ -66,13 +73,13 @@ document.addEventListener('click', (i) => {
         boxes[3]?.remove();
         document.getElementById("cup").style.display="none";
         correctItem();
-    } else if (i.target.id === 'pinkvase') {
+    } else if (i.target.id === 'vase') {
         boxes[4]?.remove();
-        document.getElementById("pinkvase").style.display="none";
+        document.getElementById("vase").style.display="none";
         correctItem();
-    } else if (i.target.id === 'bluescarf') {
+    } else if (i.target.id === 'scarf') {
         boxes[5]?.remove();
-        document.getElementById("bluescarf").style.display="none";
+        document.getElementById("scarf").style.display="none";
         correctItem();
     } else if (i.target.id === 'bird') {
         boxes[6]?.remove();
@@ -91,11 +98,13 @@ document.addEventListener('click', (i) => {
         document.getElementById("mirror").style.display="none";
         correctItem();
     } else if (i.target.id === 'hint') {
-        lamp.classList.add("glow")
-        alert("detected");
+        newarray = document.querySelectorAll(".littlebox");
+        console.log(newarray);
+        id = newarray[0].textContent.trim().toLowerCase();
+        document.getElementById(id)?.classList.add('glow');
     } else if (i.target.id === 'image1') {
         loseLife();
     }
 });
 
-//timerInterval = setInterval(reduceTime,1000);
+timerInterval = setInterval(reduceTime,1000);
