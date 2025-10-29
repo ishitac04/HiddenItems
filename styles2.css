@@ -1,0 +1,149 @@
+#title {
+    height: 80px;
+    width: 1350px;
+    border: 2px solid #ffffff;
+    background-color: rgb(41, 42, 92);
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#timer {
+    height: 30px;
+    width: 1350px;
+}
+
+#scrollingbox {
+    left: 100px;
+    height: 480px;
+    width: 400px;
+    border: 2px solid #ffffff;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+#maingamebox {
+    height: 480px;
+    width: 1000px;
+    border: 2px solid #ffffff;
+    background: radial-gradient(rgb(189, 200, 202), rgb(142, 158, 201))
+}
+
+.littlebox {
+    margin-top: 10px;
+    height: 50px;
+    width: 360px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    font-size: xx-large;
+    border: #ffffff solid 1px;
+    background: radial-gradient(rgb(189, 200, 202), rgb(142, 158, 201));
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#image1 {
+    background-size: 100%;
+    top: 104px;
+    height: 480px;
+    width: 950px;
+    z-index: 10;
+    position: fixed;
+}
+
+#hint {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 490px;
+    left: 875px;
+    background-image: url("hint.png");
+    background-size: 100%;
+    z-index: 999;
+}
+
+.glow {
+    position: fixed;
+    animation: glow 1s ease-in-out infinite alternate;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 15px rgba(255, 255, 0, 1);
+    z-index: 10000;
+  }
+  
+      
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.7);
+    } to {
+        box-shadow: 0 0 25px 15px rgba(255, 255, 0, 1);
+    }
+}
+
+#bodycontent {
+    margin-top: 10px;;
+    height: 450px;
+    width: 1350px;
+    display: flex;
+    gap: 10px;
+    bottom: 20px;
+}
+
+#grid {
+    position: fixed;
+    border-radius: 20px;
+    border: 3px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(5, 190px);
+    grid-template-rows: repeat(3,155px);
+    z-index: 999;
+}
+
+#grid div {
+    width: 190px;
+    height: 155px;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 999;
+}
+
+.sunglasses {
+    background-image: url("umbrella.png");
+    background-size: 100%;
+    z-index: 999;
+}
+
+.cup {
+    background-color: blueviolet;
+    z-index: 999;
+}
+
+.two {
+    background-color: rgb(148, 117, 177);
+    z-index: 999;
+}
+
+.three {
+    background-color: rgb(84, 32, 133);
+    z-index: 999;
+}
+.four {
+    background-color: rgb(117, 118, 177);
+    z-index: 999;
+}
+.five {
+    background-color: rgb(136, 177, 117);
+    z-index: 999;
+}
+.six {
+    background-color: rgb(166, 177, 117);
+    z-index: 999;
+}.seven {
+    background-color: rgb(216, 71, 27);
+    z-index: 999;
+}
