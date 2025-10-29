@@ -342,3 +342,25 @@ body {
     z-index: 9999;
     display: none;
 }
+
+#grid {
+    position: fixed;
+    border-radius: 20px;
+    border: 3px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(10, 95px);
+    grid-template-rows: repeat(3,155px);
+    z-index: 999;
+}
+
+#grid div {
+    width: 95px;
+    height: 155px;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 999;
+}
