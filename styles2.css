@@ -91,14 +91,18 @@
 }
 
 #grid {
-    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(5, 190px); /* extra so we have room to scroll */
+    grid-template-rows: repeat(3, 155px);
+    gap: 5px;
+    position: relative;
+    left: 0; /* we'll move this with JS */
+    transition: left 0.1s linear;
     border-radius: 20px;
     border: 3px solid #000000;
-    display: grid;
-    grid-template-columns: repeat(5, 190px);
-    grid-template-rows: repeat(3,155px);
     z-index: 999;
 }
+
 
 #grid div {
     width: 190px;
@@ -112,38 +116,103 @@
     z-index: 999;
 }
 
-.sunglasses {
+.umbrella {
     background-image: url("umbrella.png");
     background-size: 100%;
     z-index: 999;
 }
-
-.cup {
-    background-color: blueviolet;
+.shell {
+    background-image: url("shell.png");
+    background-size: 100%;
     z-index: 999;
 }
-
-.two {
-    background-color: rgb(148, 117, 177);
+.flower {
+    background-image: url("flower.png");
+    background-size: 100%;
     z-index: 999;
 }
-
-.three {
-    background-color: rgb(84, 32, 133);
+.dice {
+    background-image: url("dice.png");
+    background-size: 100%;
     z-index: 999;
 }
-.four {
-    background-color: rgb(117, 118, 177);
+.phone {
+    background-image: url("phone.png");
+    background-size: 100%;
     z-index: 999;
 }
-.five {
-    background-color: rgb(136, 177, 117);
+.extinguisher {
+    background-image: url("extinguisher.png");
+    background-size: 100%;
     z-index: 999;
 }
-.six {
-    background-color: rgb(166, 177, 117);
+.basketball {
+    background-image: url("basketball.png");
+    background-size: 100%;
     z-index: 999;
-}.seven {
-    background-color: rgb(216, 71, 27);
+}
+.cone {
+    background-image: url("trafficcone.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.target {
+    background-image: url("target.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.books {
+    background-image: url("books.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.shoes {
+    background-image: url("shoes.webp");
+    background-size: 100%;
+    z-index: 999;
+}
+.pencil {
+    background-image: url("pencil.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.comb {
+    background-image: url("comb.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.perfume {
+    background-image: url("perfume.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.shirt {
+    background-image: url("shirt.webp");
+    background-size: 100%;
+    z-index: 999;
+}
+.teddy {
+    background-image: url("teddy.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.fish {
+    background-image: url("fish.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.cake {
+    background-image: url("cake.webp");
+    background-size: 100%;
+    z-index: 999;
+}
+.crystal {
+    background-image: url("crystal.png");
+    background-size: 100%;
+    z-index: 999;
+}
+.megaphone {
+    background-image: url("megaphone.webp");
+    background-size: 100%;
     z-index: 999;
 }
