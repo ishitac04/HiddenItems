@@ -1,13 +1,10 @@
 HiddenItems game
 
 TO DO LIST:
-- Get images for backgrounds/ puzzles - done
-- List of items - 10 per picture - done
-- Create HTML page for the item selecting page - done
 - Create an opening screen
-- Add object detection - done
-- Add timer - done
-- Add sound effects
-- Add score tracking - done
-- Add incorrect touches lives things
 - Hint button
+- Add end screen
+- Add background music
+- Add level 2
+- Add level 3
+- Add menu screen?

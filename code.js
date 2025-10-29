@@ -6,6 +6,7 @@ const score = document.getElementById("score");
 const boxes = document.querySelectorAll(".littlebox");
 const correct = document.getElementById("correct");
 const wrong = document.getElementById("wrong");
+const lamp = document.getElementById('lamp');
 let lives = 3;
 let timerInterval;
 
@@ -41,8 +42,12 @@ function correctItem() {
     correct.play();
     timeleft=timeleft+2;
     numscore=numscore+1;
-    score.textContent = "Items Found: "+numscore; 
+    score.textContent = "Items Found: "+numscore;
+    if (numscore==10) {
+        alert("DONE!!")
+    }
 }
+
 
 document.addEventListener('click', (i) => {
     if (i.target.id === 'lamp') {
@@ -85,10 +90,12 @@ document.addEventListener('click', (i) => {
         boxes[9]?.remove();
         document.getElementById("mirror").style.display="none";
         correctItem();
+    } else if (i.target.id === 'hint') {
+        lamp.classList.add("glow")
+        alert("detected");
     } else if (i.target.id === 'image1') {
         loseLife();
     }
 });
 
-
-timerInterval = setInterval(reduceTime,1000);
+//timerInterval = setInterval(reduceTime,1000);
