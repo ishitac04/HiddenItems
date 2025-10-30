@@ -1,11 +1,16 @@
 let array = ["Umbrella","Shell","Flower","Dice","Phone","Extinguisher","Basketball","Cone","Target","Books","Shoes","Pencil","Bottle","Comb","Perfume","Teddy","Fish","Cake","Crystal","Megaphone"];
 const littleboxes = document.querySelectorAll(".littlebox");
+let correct = document.getElementById("correct");
+let wrong = document.getElementById("wrong");
 let useditems=[];
 let index;
 let index2;
 let used=[];
 let item;
 let foundone=0;
+let timeleft=10;
+let timepercent=100;
+let timerInterval;
 
 function generateGrid() {
     const board = document.getElementById('grid');
@@ -14,6 +19,17 @@ function generateGrid() {
         board.appendChild(square)
     }
     boxes = document.querySelectorAll('#grid div')
+}
+
+function reduceTime() {
+  if (timeleft > 0) {
+      timeleft = timeleft - 1;
+      timepercent=(timeleft/10) * 100;
+      timerbar.style.height = timepercent + "%";
+  } else if (timeleft <= 0) {
+      alert("Game over");
+      timeleft=100;
+  }
 }
 
 function addItems() {
@@ -30,6 +46,8 @@ function addItems() {
     }
 }
 
+
+
 function addText() {
   for (let i = 0; i < 3; i++) {
   item = Math.floor(Math.random() * 30);
@@ -41,36 +59,70 @@ function addText() {
   }
 }
 
+function animateBox(box, newClass) {
+  const oldClass = box.classList[0];
+  box.classList.add("shrink");
+  box.addEventListener("animationend", function handler() {
+    box.classList.remove("shrink", oldClass);
+    box.classList.add(newClass, "grow");
+    box.addEventListener(
+      "animationend",
+      () => box.classList.remove("grow"),
+      { once: true }
+    );
+    box.removeEventListener("animationend", handler);
+  });
+}
+
+function fadeLittleBox(lb, newText) {
+  lb.classList.add("fade-out");
+  lb.addEventListener("animationend", function handler() {
+    lb.textContent = newText;
+    lb.classList.remove("fade-out");
+    lb.classList.add("fade-in");
+    lb.addEventListener("animationend", () => lb.classList.remove("fade-in"), { once: true });
+    lb.removeEventListener("animationend", handler);
+  });
+}
+
+
 function gridClick() {
   boxes.forEach((box) => {
     box.addEventListener("click", () => {
+      foundone=0;
       const className = box.classList[0];
       console.log(className);
       for (let i=0; i<3; i++) {
         boxcontent = littleboxes[i].textContent;
         console.log(boxcontent);
         if (boxcontent == className) {
+          correct.play();
+          timeleft = timeleft + 2;
           littleboxes[i].textContent = "";
           box.classList.remove(className);
           foundone=1;
           index2 = Math.floor(Math.random()*(array.length));
-          useditems.push(array[index2])
-          box.classList.add(array[index2])
-          
+          useditems.push(array[index2]);
+          box.classList.add(array[index2]);
+          newClass = array[index2];
+          animateBox(box, newClass);
           item = Math.floor(Math.random() * 30);
-          while (used.includes(item)) {
-            item = Math.floor(Math.random() * 30);
-          }
           used.push(item);
-          littleboxes[i].textContent = boxes[item].classList[0];
+          fadeLittleBox(littleboxes[i], boxes[item].classList[0]);
         }
       }
       if (foundone==0) {
-        alert("wrong!")
+        wrong.play();
+        timeleft=timeleft - 1;
       }
     });
   });
 }
+
+overlayscreen2.addEventListener('click', () => {
+  overlayscreen2.style.display = 'none';
+  timerInterval = setInterval(reduceTime,1000);
+});
 
 generateGrid();
 addItems();

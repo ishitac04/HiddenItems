@@ -2,6 +2,7 @@ HiddenItems game
 
 TO DO LIST:
 - Hint limit visual
+- Game over screen
 - Add background music
 - Add level 2
 - Add level 3
