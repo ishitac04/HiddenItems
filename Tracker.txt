@@ -2,11 +2,5 @@ HiddenItems game
 
 TO DO LIST:
 - Add level 2
-- Add menu screen?
 
 INFINITE MODE:
-- Change title
-
-
-Images needed:
-- new level 2

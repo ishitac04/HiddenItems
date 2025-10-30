@@ -38,6 +38,11 @@ body {
     border-radius: 20px;
 }
 
+#invisible {
+    height: 100px;
+    width: 1300px;
+}
+
 #titlewrapper {
     top: 20;
     font-size: xxx-large;
@@ -45,7 +50,7 @@ body {
     align-items: center;
     z-index: 10;
     width: 1300px;
-    height: 90px;
+    height: 110px;
     background-color: #5f81c0;
     border: 4px solid #000000;
     margin-bottom: 10px;
