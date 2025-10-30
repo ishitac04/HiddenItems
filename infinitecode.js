@@ -2,6 +2,8 @@ let array = ["Umbrella","Shell","Flower","Dice","Phone","Extinguisher","Basketba
 const littleboxes = document.querySelectorAll(".littlebox");
 let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
+let overlayscreen2 = document.getElementById("overlayscreen2");
+const bgmusic = document.getElementById('bgmusic');
 let useditems=[];
 let index;
 let index2;
@@ -11,6 +13,8 @@ let foundone=0;
 let timeleft=10;
 let timepercent=100;
 let timerInterval;
+let numscore=0;
+let score = document.getElementById("score");
 
 function generateGrid() {
     const board = document.getElementById('grid');
@@ -27,7 +31,9 @@ function reduceTime() {
       timepercent=(timeleft/10) * 100;
       timerbar.style.height = timepercent + "%";
   } else if (timeleft <= 0) {
-      alert("Game over");
+      document.getElementById("overlayscreen").style.display = "block";
+      document.getElementById("menubutton").style.display = "block";
+      document.getElementById("button2").style.display = "block";
       timeleft=100;
   }
 }
@@ -96,8 +102,13 @@ function gridClick() {
         boxcontent = littleboxes[i].textContent;
         console.log(boxcontent);
         if (boxcontent == className) {
+          numscore=numscore+1;
+          score.textContent = "Items Found: "+numscore;
           correct.play();
           timeleft = timeleft + 2;
+          if (timeleft==10) {
+            timeleft=10;
+          }
           littleboxes[i].textContent = "";
           box.classList.remove(className);
           foundone=1;
@@ -121,6 +132,7 @@ function gridClick() {
 
 overlayscreen2.addEventListener('click', () => {
   overlayscreen2.style.display = 'none';
+  bgmusic.play();
   timerInterval = setInterval(reduceTime,1000);
 });
 

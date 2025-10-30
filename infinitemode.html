@@ -3,17 +3,34 @@
         <title>
             HiddenObjects - Level 1
         </title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles2.css">
     </head>
     <body>
         <audio id="wrong" src="wrong.mp3" preload="auto"></audio>
         <audio id="correct" src="correct.mp3" preload="auto"></audio>
+        <audio id="bgmusic" src="bgmusic.mp3" preload="auto" loop></audio>
         <div id="title"> <img src="title.png" height="100%" width="60%"></div>
         <div id="bodycontent">
-        <div id="maingamebox">
+        <div id="maingamebox"> 
+        <div id="grid"></div>
         </div>   
         <div id="scrollingbox">
+            <div class="littlebox"></div>
+            <div class="littlebox"></div>
+            <div class="littlebox"></div>
         </div>
+        <div id="score"> Items Found: 0</div>
+        <div id="timerwrapper">
+            <div id="timerbar"></div>
+        </div>  
+        <div id="overlayscreen"><img src="infiniteend.png" height="90%" width="90%"></div>
+        <div id="overlayscreen2"><img src="infinite.png" height="90%" width="90%"></div>
+        <A href="menu.html">
+            <div id="menubutton"></div>
+        </A>
+        <A href="infinitemode.html">
+            <div id="button2"></div>
+        </A>
         </div>
         <script src="infinitecode.js"> </script>
     </body>

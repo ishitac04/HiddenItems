@@ -2,17 +2,11 @@ HiddenItems game
 
 TO DO LIST:
 - Hint limit visual
-- Game over screen
-- Add background music
 - Add level 2
 - Add level 3
-- opening/ end image
 - Add menu screen?
 
 INFINITE MODE:
-- make items disappear
-- timer
-- sound effects
 
 
 Images needed:

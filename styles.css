@@ -23,7 +23,7 @@ body {
 #scrollingbox {
     left: 100px;
     height: 480px;
-    width: 400px;
+    width: 600px;
     border: 2px solid #ffffff;
     z-index: 999;
     overflow-y: scroll;
@@ -31,7 +31,7 @@ body {
 
 #maingamebox {
     height: 480px;
-    width: 1000px;
+    width: 1800px;
     border: 2px solid #ffffff;
     background: radial-gradient(rgb(189, 200, 202), rgb(142, 158, 201))
 }
@@ -323,6 +323,19 @@ body {
     display: block;
 }
 
+#overlayscreen3 {
+    position: fixed;
+    top: 120px;
+    left: 300px;
+    height: 400px;
+    width: 750px;
+    border-radius: 30px;
+    background-color: rgb(41, 42, 92);
+    border: 3px solid #ffffff;
+    z-index: 9000;
+    display: none;
+}
+
 #menubutton {
     position: fixed;
     height: 60px;
@@ -334,6 +347,16 @@ body {
 }
 
 #button2 {
+    position: fixed;
+    height: 60px;
+    width: 230px;
+    top: 370px;
+    left: 750px;
+    z-index: 9999;
+    display: none;
+}
+
+#button3 {
     position: fixed;
     height: 60px;
     width: 230px;
@@ -363,4 +386,9 @@ body {
     font-weight: bold;
     font-size: 20px;
     z-index: 999;
+}
+
+.remaininghints {
+    position: fixed;
+    z-index: 99;
 }

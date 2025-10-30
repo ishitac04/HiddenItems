@@ -1,36 +1,15 @@
 <html>
     <head>
-        <title>
-            HiddenObjects - Level 1
-        </title>
-        <link rel="stylesheet" href="styles2.css">
+        <title> Level Menu </title>
+        <link rel="stylesheet" href="menustyle.css">
     </head>
     <body>
-        <audio id="wrong" src="wrong.mp3" preload="auto"></audio>
-        <audio id="correct" src="correct.mp3" preload="auto"></audio>
-        <div id="title"> <img src="title.png" height="100%" width="60%"></div>
-        <div id="bodycontent">
-        <div id="maingamebox"> 
-        <div id="grid"></div>
-        </div>   
-        <div id="scrollingbox">
-            <div class="littlebox"></div>
-            <div class="littlebox"></div>
-            <div class="littlebox"></div>
+        <div class="levels">
+        <div id="titlewrapper">................................HIDDEN ITEMS..............................</div>
+        <A href="level1.html"><div id="levelbox"> Level 1 </div> </A>
+        <A href="level2.html"><div id="levelbox"> Level 2 </div> </A>
+        <A href="infinitemode.html"><div id="levelbox"> Infinite </div> </A>
         </div>
-        <div id="score"> Items Found: 0</div>
-        <div id="timerwrapper">
-            <div id="timerbar"></div>
-        </div>  
-        <div id="overlayscreen"><img src="endoflevel1.png" height="90%" width="90%"></div>
-        <div id="overlayscreen2"><img src="level1opening.png" height="90%" width="90%"></div>
-        <A href="menu.html">
-            <div id="menubutton"></div>
-        </A>
-        <A href="level2.html">
-            <div id="button2"></div>
-        </A>
-        </div>
-        <script src="infinitecode.js"> </script>
+        <script src="menuscript.js"></script>
     </body>
 </html>

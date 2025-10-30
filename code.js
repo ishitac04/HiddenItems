@@ -8,6 +8,7 @@ const correct = document.getElementById("correct");
 const wrong = document.getElementById("wrong");
 const lamp = document.getElementById('lamp');
 const overlayscreen2 = document.getElementById('overlayscreen2');
+const bgmusic = document.getElementById('bgmusic');
 let lives = 3;
 let timerInterval;
 let id;
@@ -21,7 +22,9 @@ function reduceTime() {
         timepercent=(timeleft/30) * 100;
         timebar.style.height = timepercent + "%";
     } else if (timeleft <= 0) {
-        alert("Game over");
+        document.getElementById("overlayscreen3").style.display = "block";
+        document.getElementById("menubutton").style.display = "block";
+        document.getElementById("button3").style.display = "block";
         timeleft=100;
     }
 }
@@ -38,7 +41,9 @@ function loseLife() {
         wrong.play();
         heart.classList.add("lost")
         clearInterval(timerInterval)
-        alert("game over!")
+        document.getElementById("overlayscreen3").style.display = "block";
+        document.getElementById("menubutton").style.display = "block";
+        document.getElementById("button3").style.display = "block";
     }
 }
 
@@ -58,6 +63,7 @@ function correctItem() {
 
 overlayscreen2.addEventListener('click', () => {
     overlayscreen2.style.display = 'none';
+    bgmusic.play();
     timerInterval = setInterval(reduceTime,1000);
 });
 
