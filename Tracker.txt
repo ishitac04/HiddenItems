@@ -9,11 +9,9 @@ TO DO LIST:
 - Add menu screen?
 
 INFINITE MODE:
-- create grid
-- add images to grid
-- make items move
-- add array to track items on screen
-- add findable items
+- make items disappear
+- timer
+- sound effects
 
 
 Images needed:
