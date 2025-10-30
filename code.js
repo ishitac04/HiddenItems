@@ -116,7 +116,8 @@ document.addEventListener('click', (i) => {
         hintsused=hintsused+1;
         document.getElementById(id)?.classList.add('glow');
         } else {
-            alert("too many hints used!")
+            wrong.play();
+            wrong.play();
         }
     } else if (i.target.id === 'image1') {
         loseLife();

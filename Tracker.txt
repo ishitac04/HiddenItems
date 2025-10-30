@@ -1,15 +1,12 @@
 HiddenItems game
 
 TO DO LIST:
-- Hint limit visual
 - Add level 2
-- Add level 3
 - Add menu screen?
 
 INFINITE MODE:
+- Change title
 
 
 Images needed:
 - new level 2
-- new level 3
-- too many hints used ("no hints left")

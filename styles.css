@@ -388,7 +388,10 @@ body {
     z-index: 999;
 }
 
-.remaininghints {
+#remaininghints {
     position: fixed;
+    background-color: rgb(54, 148, 148) ;
+    left: 100px;
+    top: 400px;
     z-index: 99;
 }
